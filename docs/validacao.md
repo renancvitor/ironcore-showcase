@@ -27,3 +27,21 @@ Executada em 22/10/2026, na branch feat/showcase-v1.
 - git diff --cached --check aponta cinco quebras Markdown com dois espaços finais no briefing fornecido. O documento foi preservado integralmente conforme solicitado. A verificação excluindo somente docs/briefing.md passa.
 
 O script reproduzível de navegador está em scripts/browser-check.mjs. Dependência temporária e evidências visuais ficam em .qa/, ignorada pelo Git e excluída da publicação.
+
+## Refinamento visual e editorial
+
+- Hero e metadados reposicionados como projeto pessoal de engenharia de software em produção.
+- Paleta conferida diretamente em _palette.scss, _themes.scss e _tokens.scss do frontend; mapeamento registrado em docs/fontes.md.
+- Reexecutada a verificação de navegador em 1440, 768, 390 e 320 px: sem overflow horizontal, com galerias, ampliação, teclado, foco, links e fallback sem JavaScript aprovados.
+- Inspeção visual do hero em desktop e mobile, preservando a composição.
+- Contraste calculado para textos principal, secundário e verde suave sobre os três fundos oficiais: mínimo de 9,17:1. Bordas dos controles sobre a superfície: 3,73:1.
+- Capturas e JavaScript de interação sem alterações; nenhuma dependência adicionada. git diff --check aprovado para o refinamento.
+
+## Preparação da integração da revisão
+
+- Alterações pendentes recuperadas após o merge do PR #1, preservadas na branch fix/showcase-identidade-editorial, baseada em origin/main no commit cf5444f.
+- Reexecutadas as validações de navegador, empacotamento, sintaxe e contraste sobre a revisão final, incluindo a autoria explícita de Renan Vitor.
+- Conferida a ausência de identificadores de versão/release no HTML público; documentos históricos preservados.
+- Capturas e script.js idênticos à implementação integrada pelo PR #1.
+- Registrada a exclusão local preexistente de LICENSE: o arquivo tinha apenas o título do repositório em UTF-16, sem termos de licença. Nenhuma licença substituta foi presumida.
+- Merge da revisão e conferência final da main dependem da aprovação e integração do novo PR. Publicação não foi acionada.
