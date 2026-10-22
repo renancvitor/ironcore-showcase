@@ -32,3 +32,17 @@ Consulta em 22/10/2026, somente leitura. Este showcase apresenta o escopo funcio
 7. Publicação aparece como aceite no briefing histórico, mas a especificação atual exige autorização. O workflow é exclusivamente manual; não foi acionado.
 
 Não são publicadas contagens de testes, percentuais de cobertura, credenciais ou promessas de disponibilidade. A hospedagem descrita é a da aplicação IronCore; este showcase é um site independente destinado ao GitHub Pages.
+
+## Refinamento editorial e identidade cromática
+
+Consulta direta aos três arquivos oficiais do frontend, sem modificá-los:
+
+- [Paleta](https://github.com/renancvitor/ironcore-frontend/blob/main/src/styles/_palette.scss): verdes principal #25a244, hover #2dc653, active #208b3a e suave #6ede8a; neutros da interface.
+- [Temas](https://github.com/renancvitor/ironcore-frontend/blob/main/src/styles/_themes.scss): tema escuro com fundo #212529, superfície #161a1d, superfície elevada #131515, texto principal #f8f9fa e secundário #edf2f4.
+- [Tokens](https://github.com/renancvitor/ironcore-frontend/blob/main/src/styles/_tokens.scss): referência de foco com largura e afastamento de 2 px. Tipografia e composição do showcase permanecem próprias.
+
+O showcase reutiliza esses papéis para fundos e textos. Verde principal identifica a borda da ação de navegação; hover e active usam os respectivos verdes oficiais. Verde suave destaca títulos, links e foco, mantendo contraste nos fundos escuros. Divisórias decorativas usam #333533 e bordas dos controles usam #6c757d. A chamada principal usa contorno, sem preenchimento promocional. Não foram importados estilos, fontes ou dependências do frontend.
+
+O hero apresenta “IronCore — da ideia à produção.” e explica tanto a finalidade da aplicação quanto o percurso de modelagem, desenvolvimento, testes e implantação. Metadados e títulos de seções acompanham esse posicionamento de projeto pessoal, preservando os conteúdos técnicos documentados.
+
+A página não exibe mais identificadores de versão/release. A autoria de Renan Vitor está explicitada na seção do projeto e aponta para o perfil proprietário dos repositórios; o nome também consta na seção de contato do README oficial do frontend. Documentos históricos mantêm suas referências de versão.
