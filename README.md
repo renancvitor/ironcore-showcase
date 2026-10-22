@@ -2,7 +2,7 @@
   IronCore Showcase
 </h1>
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-In%20Progress-yellow" width="150" height="30" alt="Status: em desenvolvimento" />
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen" width="150" height="30" alt="Status: concluído" />
 </p>
 
 ---
@@ -37,7 +37,7 @@
 
 <h2 id="status-atual-do-projeto" align="center">Status Atual do Projeto</h2>
 
-O site estático está implementado, com apresentação das funcionalidades, galerias de imagens e conteúdo técnico. A estrutura está preparada para publicação manual no GitHub Pages.
+O showcase está concluído e publicado no GitHub Pages, com apresentação das funcionalidades, galerias de imagens e conteúdo técnico.
 
 <p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
 
@@ -48,7 +48,7 @@ O site estático está implementado, com apresentação das funcionalidades, gal
 - **HTML:** estrutura e conteúdo.
 - **CSS:** identidade visual e responsividade.
 - **JavaScript:** interações das galerias e ampliação de imagens.
-- **GitHub Pages:** hospedagem estática prevista.
+- **GitHub Pages:** hospedagem do site estático.
 
 <p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
 
@@ -109,6 +109,6 @@ Abra [http://127.0.0.1:4307/ironcore-showcase/](http://127.0.0.1:4307/ironcore-s
 
 A publicação é manual pelo GitHub Actions, usando o [workflow Publish showcase (manual)](.github/workflows/pages.yml) na `main`. O envio de commits não aciona o deploy.
 
-Destino previsto: [IronCore Showcase no GitHub Pages](https://renancvitor.github.io/ironcore-showcase/).
+Site publicado: [IronCore Showcase no GitHub Pages](https://renancvitor.github.io/ironcore-showcase/).
 
 <p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
