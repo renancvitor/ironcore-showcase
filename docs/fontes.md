@@ -27,7 +27,7 @@ Consulta em 22/10/2026, somente leitura. Este showcase apresenta o escopo funcio
 2. O README do backend também contém listas de funcionalidades planejadas e diagramas futuros. Elas não foram usadas como evidência de entrega. Sessões, histórico de execução e IA não são apresentados como recursos disponíveis.
 3. A release do frontend exclui deploy das ações daquela entrega; o documento posterior de deploy confirma a implantação. São marcos diferentes.
 4. O briefing tinha pendências de coleta já resolvidas em sua seção 11 e no pacote fornecido. A especificação atual fixa dez imagens e proíbe novos recortes ou conversões. Todos os PNGs foram usados sem alteração.
-5. O caminho solicitado docs/guia-imagens.md não existia no pacote. LEIA-ME.md contém o guia integral: foi preservado e copiado literalmente para o caminho solicitado.
+5. O guia foi fornecido originalmente em LEIA-ME.md e copiado para docs/guia-imagens.md na implementação inicial. Agora o [guia de imagens](guia-imagens.md) é a fonte única; o arquivo da raiz mantém um encaminhamento para preservar as referências do briefing histórico.
 6. A captura 04 mostra um gráfico parcial. A legenda informa esse limite; a imagem 03 permanece como destaque da avaliação.
 7. Publicação aparece como aceite no briefing histórico, mas a especificação atual exige autorização. O workflow é exclusivamente manual; não foi acionado.
 
@@ -43,6 +43,8 @@ Consulta direta aos três arquivos oficiais do frontend, sem modificá-los:
 
 O showcase reutiliza esses papéis para fundos e textos. Verde principal identifica a borda da ação de navegação; hover e active usam os respectivos verdes oficiais. Verde suave destaca títulos, links e foco, mantendo contraste nos fundos escuros. Divisórias decorativas usam #333533 e bordas dos controles usam #6c757d. A chamada principal usa contorno, sem preenchimento promocional. Não foram importados estilos, fontes ou dependências do frontend.
 
-O hero apresenta “IronCore — da ideia à produção.” e explica tanto a finalidade da aplicação quanto o percurso de modelagem, desenvolvimento, testes e implantação. Metadados e títulos de seções acompanham esse posicionamento de projeto pessoal, preservando os conteúdos técnicos documentados.
+O hero apresenta o texto superior “PROJETO PESSOAL”, o título “IronCore” e a descrição aprovada: “O IronCore conecta avaliações corporais, exercícios e planejamento de treinos. Um lugar para acompanhar suas medidas e dar estrutura aos seus objetivos.” Não há slogan ou subtítulo entre o título e a descrição. Os metadados seguem essa apresentação; o conteúdo técnico permanece na seção de engenharia.
 
 A página não exibe mais identificadores de versão/release. A autoria de Renan Vitor está explicitada na seção do projeto e aponta para o perfil proprietário dos repositórios; o nome também consta na seção de contato do README oficial do frontend. Documentos históricos mantêm suas referências de versão.
+
+[Voltar para o índice de documentação](README.md)

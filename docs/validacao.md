@@ -45,3 +45,20 @@ O script reproduzível de navegador está em scripts/browser-check.mjs. Dependê
 - Capturas e script.js idênticos à implementação integrada pelo PR #1.
 - Registrada a exclusão local preexistente de LICENSE: o arquivo tinha apenas o título do repositório em UTF-16, sem termos de licença. Nenhuma licença substituta foi presumida.
 - Merge da revisão e conferência final da main dependem da aprovação e integração do novo PR. Publicação não foi acionada.
+
+## Correções finais na main
+
+Executadas após a sincronização com o merge do PR #2 (9299cef). O diretório de trabalho estava limpo; nenhum trabalho local foi descartado. Esta etapa segue o fluxo aprovado de commits diretamente na main.
+
+- Abertura conferida em quatro larguras: texto superior “PROJETO PESSOAL”, título “IronCore” e descrição aprovada imediatamente após o título, sem slogan intermediário.
+- Metadados alinhados à introdução; expressões removidas também do HTML restante.
+- Paleta, temas e tokens oficiais consultados novamente. Cores e estados existentes conferidos; não foi necessário alterar o CSS.
+- READMEs e índices docs/README.md dos projetos originais usados como referência estrutural. Criado índice próprio, mantido o guia em docs/guia-imagens.md e substituída a cópia duplicada em LEIA-ME.md por encaminhamento.
+- Verificados 27 links e âncoras locais na documentação. Briefing histórico preservado integralmente.
+- node --check aprovado para script.js, scripts/package.mjs e scripts/serve.mjs; git diff --check aprovado.
+- scripts/package.mjs aprovado: 16 arquivos públicos, PNGs sem transformação.
+- scripts/browser-check.mjs aprovado em 1440, 768, 390 e 320 px: layout, galerias, ampliação das dez capturas, teclado/foco, caminhos em subdiretório, fallback sem JavaScript, movimento reduzido e ausência de requisições externas/cookies/storage.
+- Conferidas a introdução exata, os metadados e a ausência das expressões removidas nessas quatro larguras. Inspeção visual desktop/mobile concluída.
+- Capturas, script.js, estilos e briefing idênticos ao estado sincronizado da main. Nenhuma dependência adicionada; publicação não acionada.
+
+[Voltar para o índice de documentação](README.md)

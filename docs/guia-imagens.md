@@ -68,6 +68,8 @@ A numeração dos arquivos segue a coleta original; **a ordem editorial é a lis
 
 ## Arquivos de apoio
 
-- `docs/briefing.md`: briefing da história e requisitos, atualizado com a decisão de imagens.
-- `manifesto-imagens.json`: descrição dos crops, localização dos originais e usos editoriais.
+- [Briefing](briefing.md): briefing da história e requisitos, atualizado com a decisão de imagens.
+- [Manifesto das imagens](../manifesto-imagens.json): descrição dos crops, localização dos originais e usos editoriais.
 - `visao-geral.jpg`: contato visual para revisão humana (não publicar como uma tela da aplicação).
+
+[Voltar para o índice de documentação](README.md)

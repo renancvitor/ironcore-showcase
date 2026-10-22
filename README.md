@@ -4,6 +4,17 @@ Apresentação estática do IronCore para dois públicos: uma jornada visual pel
 
 O showcase não se conecta à aplicação: não possui login, API, banco, analytics, cookies ou persistência local. Não demonstra execução de sessões nem funcionalidades futuras.
 
+## Sumário
+
+- [Executar localmente](#executar-localmente)
+- [Organização](#organização)
+- [Documentação](#documentação)
+- [Conteúdo e imagens](#conteúdo-e-imagens)
+- [Validar](#validar)
+- [Fluxo de trabalho](#fluxo-de-trabalho)
+- [Publicar no GitHub Pages](#publicar-no-github-pages)
+- [Repositórios oficiais](#repositórios-oficiais)
+
 ## Executar localmente
 
 O site usa HTML, CSS e JavaScript nativos, sem dependências de execução ou compilação. É possível abrir index.html diretamente no navegador.
@@ -25,9 +36,7 @@ Abra http://127.0.0.1:4307/ironcore-showcase/. Encerre com Ctrl+C. O script copi
 | script.js | Galerias manuais e ampliação com dialog nativo |
 | assets/screenshots/ | Dez PNGs autorizados, preservados integralmente |
 | assets/favicon.svg | Marca tipográfica decorativa do showcase |
-| docs/briefing.md | Briefing histórico preservado |
-| docs/guia-imagens.md | Cópia integral do guia fornecido em LEIA-ME.md |
-| docs/fontes.md | Fontes técnicas e resolução de diferenças documentais |
+| docs/ | Índice, guia de imagens, fontes, validações e briefing histórico |
 | manifesto-imagens.json | Proveniência original das capturas |
 | scripts/package.mjs | Cópia por lista explícita dos arquivos publicáveis |
 | scripts/serve.mjs | Servidor de prévia local com subdiretório |
@@ -35,6 +44,10 @@ Abra http://127.0.0.1:4307/ironcore-showcase/. Encerre com Ctrl+C. O script copi
 | .github/workflows/pages.yml | Publicação manual após autorização |
 
 originais/, extras/, visao-geral.jpg, .qa/ e dist/ são ignorados pelo Git. Originais e capturas opcionais não fazem parte do artefato de publicação.
+
+## Documentação
+
+O [índice de documentação](docs/README.md) centraliza as referências editoriais, a identidade visual, as validações e o briefing histórico. O [guia de imagens](docs/guia-imagens.md) é mantido em um único documento; LEIA-ME.md preserva o acesso pelo caminho original do pacote.
 
 ## Conteúdo e imagens
 
@@ -63,13 +76,19 @@ node scripts/browser-check.mjs
 
 A verificação usa Edge headless, sem instalar outro navegador. PLAYWRIGHT_MODULE e BROWSER_PATH podem indicar instalações alternativas. As evidências ficam em .qa/. Não há dependência de Playwright no site ou no fluxo de publicação.
 
+## Fluxo de trabalho
+
+As alterações deste repositório são feitas diretamente na main: confira e preserve o trabalho local, sincronize a branch, implemente, execute as validações e envie o commit para origin/main. Não é necessário criar branches ou Pull Requests.
+
+O envio de commits não publica o site. A publicação continua sendo uma ação manual separada, autorizada pelo responsável.
+
 ## Publicar no GitHub Pages
 
 Destino previsto: https://renancvitor.github.io/ironcore-showcase/.
 
 **A publicação exige decisão explícita do responsável. Nada é publicado em push ou pull request.**
 
-1. Revise o PR, as capturas autorizadas e o conteúdo. Após aprovação, faça merge na main.
+1. Revise as capturas autorizadas e o conteúdo, valide as alterações e confirme seu envio à main.
 2. No GitHub, configure Settings → Pages → Source como GitHub Actions.
 3. Execute manualmente Actions → Publish showcase (manual) → Run workflow, na main.
 4. O workflow copia somente os 16 arquivos permitidos para dist/, envia esse artefato e publica no Pages. Não há npm install ou compilação.
