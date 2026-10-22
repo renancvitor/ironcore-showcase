@@ -1,0 +1,284 @@
+{
+  "version": "2026-10-22",
+  "editable_allowed": "rectangular crop only",
+  "published_main_screenshots": 10,
+  "optional_screenshots": 1,
+  "excluded": "12-profile: privacy, contains full name and birthdate",
+  "shots": [
+    {
+      "n": 1,
+      "date": "172358",
+      "slug": "01-home",
+      "title": "Home / visão geral",
+      "crop": [
+        365,
+        58,
+        1555,
+        923
+      ],
+      "placement": "Hero principal",
+      "state": "principal",
+      "desc": "Última avaliação, evolução corporal e ciclos de treino",
+      "file": "assets/screenshots/01-home.png",
+      "source": "originais/01-home-original.png",
+      "dimensions": [
+        1190,
+        865
+      ],
+      "source_dimensions": [
+        1916,
+        945
+      ]
+    },
+    {
+      "n": 2,
+      "date": "172423",
+      "slug": "02-avaliacoes-historico",
+      "title": "Histórico de avaliações",
+      "crop": [
+        350,
+        49,
+        1580,
+        469
+      ],
+      "placement": "Avaliação corporal / galeria 1",
+      "state": "principal",
+      "desc": "Histórico paginado de medições",
+      "file": "assets/screenshots/02-avaliacoes-historico.png",
+      "source": "originais/02-avaliacoes-historico-original.png",
+      "dimensions": [
+        1230,
+        420
+      ],
+      "source_dimensions": [
+        1916,
+        934
+      ]
+    },
+    {
+      "n": 3,
+      "date": "172507",
+      "slug": "03-avaliacao-detalhes",
+      "title": "Detalhe de avaliação",
+      "crop": [
+        350,
+        60,
+        1580,
+        941
+      ],
+      "placement": "Avaliação corporal / destaque",
+      "state": "principal",
+      "desc": "Indicadores de composição e circunferências",
+      "file": "assets/screenshots/03-avaliacao-detalhes.png",
+      "source": "originais/03-avaliacao-detalhes-original.png",
+      "dimensions": [
+        1230,
+        881
+      ],
+      "source_dimensions": [
+        1917,
+        943
+      ]
+    },
+    {
+      "n": 4,
+      "date": "172547",
+      "slug": "04-evolucao-graficos",
+      "title": "Evolução corporal / gráficos",
+      "crop": [
+        345,
+        0,
+        1565,
+        939
+      ],
+      "placement": "Avaliação corporal / galeria 2",
+      "state": "principal",
+      "desc": "Seleção de período e linhas de evolução (gráfico continua abaixo da área capturada)",
+      "file": "assets/screenshots/04-evolucao-graficos.png",
+      "source": "originais/04-evolucao-graficos-original.png",
+      "dimensions": [
+        1220,
+        939
+      ],
+      "source_dimensions": [
+        1909,
+        941
+      ]
+    },
+    {
+      "n": 5,
+      "date": "172616",
+      "slug": "05-evolucao-comparativo",
+      "title": "Evolução corporal / comparativo",
+      "crop": [
+        345,
+        0,
+        1565,
+        937
+      ],
+      "placement": "Avaliação corporal / galeria 3",
+      "state": "principal",
+      "desc": "Comparativo de valores e variações entre avaliações",
+      "file": "assets/screenshots/05-evolucao-comparativo.png",
+      "source": "originais/05-evolucao-comparativo-original.png",
+      "dimensions": [
+        1220,
+        937
+      ],
+      "source_dimensions": [
+        1912,
+        939
+      ]
+    },
+    {
+      "n": 6,
+      "date": "173203",
+      "slug": "06-exercicios-catalogo",
+      "title": "Catálogo de exercícios",
+      "crop": [
+        350,
+        52,
+        1565,
+        943
+      ],
+      "placement": "Catálogo / galeria 1",
+      "state": "principal",
+      "desc": "Filtros combinados e exercícios disponíveis",
+      "file": "assets/screenshots/06-exercicios-catalogo.png",
+      "source": "originais/06-exercicios-catalogo-original.png",
+      "dimensions": [
+        1215,
+        891
+      ],
+      "source_dimensions": [
+        1916,
+        945
+      ]
+    },
+    {
+      "n": 7,
+      "date": "173243",
+      "slug": "07-exercicio-detalhes",
+      "title": "Detalhes de exercício",
+      "crop": [
+        347,
+        0,
+        1580,
+        934
+      ],
+      "placement": "Catálogo / galeria 2",
+      "state": "principal",
+      "desc": "Informações gerais e músculos trabalhados",
+      "file": "assets/screenshots/07-exercicio-detalhes.png",
+      "source": "originais/07-exercicio-detalhes-original.png",
+      "dimensions": [
+        1233,
+        934
+      ],
+      "source_dimensions": [
+        1916,
+        936
+      ]
+    },
+    {
+      "n": 8,
+      "date": "173312",
+      "slug": "08-treinos-catalogo",
+      "title": "Catálogo de ciclos",
+      "crop": [
+        352,
+        55,
+        1585,
+        767
+      ],
+      "placement": "Treinos / galeria 1",
+      "state": "principal",
+      "desc": "Ciclos de treino com seus objetivos, status e filtros",
+      "file": "assets/screenshots/08-treinos-catalogo.png",
+      "source": "originais/08-treinos-catalogo-original.png",
+      "dimensions": [
+        1233,
+        712
+      ],
+      "source_dimensions": [
+        1918,
+        942
+      ]
+    },
+    {
+      "n": 9,
+      "date": "173356",
+      "slug": "09-treino-detalhes",
+      "title": "Detalhe de ciclo de treino",
+      "crop": [
+        350,
+        0,
+        1575,
+        935
+      ],
+      "placement": "Treinos / destaque",
+      "state": "principal",
+      "desc": "Ciclo com dias, atividades e parâmetros de prescrição",
+      "file": "assets/screenshots/09-treino-detalhes.png",
+      "source": "originais/09-treino-detalhes-original.png",
+      "dimensions": [
+        1225,
+        935
+      ],
+      "source_dimensions": [
+        1917,
+        938
+      ]
+    },
+    {
+      "n": 10,
+      "date": "173454",
+      "slug": "10-treino-selecao-exercicios",
+      "title": "Seleção de exercícios",
+      "crop": [
+        345,
+        0,
+        1565,
+        942
+      ],
+      "placement": "Treinos / galeria 2",
+      "state": "principal",
+      "desc": "Seleção contextual de exercícios para o planejamento",
+      "file": "assets/screenshots/10-treino-selecao-exercicios.png",
+      "source": "originais/10-treino-selecao-exercicios-original.png",
+      "dimensions": [
+        1220,
+        942
+      ],
+      "source_dimensions": [
+        1915,
+        944
+      ]
+    },
+    {
+      "n": 11,
+      "date": "173522",
+      "slug": "11-treino-atividades-complemento",
+      "title": "Detalhamento complementar de atividades",
+      "crop": [
+        345,
+        0,
+        1565,
+        941
+      ],
+      "placement": "Opcional / lightbox técnico",
+      "state": "opcional",
+      "desc": "Continuação do detalhe de ciclo; NÃO é formulário de prescrição",
+      "file": "extras/11-treino-atividades-complemento.png",
+      "source": "originais/11-treino-atividades-complemento-original.png",
+      "dimensions": [
+        1220,
+        941
+      ],
+      "source_dimensions": [
+        1917,
+        943
+      ]
+    }
+  ]
+}
