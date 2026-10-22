@@ -1,107 +1,185 @@
-# IronCore Showcase
+<h1 align="center">
+  IronCore Showcase
+</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-In%20Progress-yellow" width="150" height="30" alt="Status: em desenvolvimento" />
+</p>
 
-Apresentação estática do IronCore para dois públicos: uma jornada visual pelas funcionalidades e uma seção dedicada às decisões de engenharia. Escopo: primeira fase funcional v1.0.0, com infraestrutura conforme documentação consultada em outubro de 2026.
+---
 
-O showcase não se conecta à aplicação: não possui login, API, banco, analytics, cookies ou persistência local. Não demonstra execução de sessões nem funcionalidades futuras.
+<h2 align="center">🔗 Repositórios Relacionados</h2>
 
-## Sumário
+A aplicação apresentada neste showcase está organizada em dois repositórios independentes:
 
-- [Executar localmente](#executar-localmente)
-- [Organização](#organização)
-- [Documentação](#documentação)
-- [Conteúdo e imagens](#conteúdo-e-imagens)
-- [Validar](#validar)
-- [Fluxo de trabalho](#fluxo-de-trabalho)
-- [Publicar no GitHub Pages](#publicar-no-github-pages)
-- [Repositórios oficiais](#repositórios-oficiais)
+- 🌐 [IronCore Frontend](https://github.com/renancvitor/ironcore-frontend): interface Angular e experiência de uso.
+- ☕ [IronCore Backend](https://github.com/renancvitor/ironcore-backend): API, regras de domínio e persistência.
 
-## Executar localmente
+---
 
-O site usa HTML, CSS e JavaScript nativos, sem dependências de execução ou compilação. É possível abrir index.html diretamente no navegador.
+<h2 id="sumario" align="center">Sumário</h2>
 
-Para uma prévia HTTP que reproduz o subdiretório do GitHub Pages, com Node.js 24:
+- [Visão Geral do Projeto](#visao-geral-do-projeto)
+- [Status Atual do Projeto](#status-atual-do-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Funcionalidades Disponíveis](#funcionalidades-disponiveis)
+- [Documentação Técnica](#documentacao-tecnica)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Como Executar o Projeto](#como-executar-o-projeto)
+- [Testes e Validações](#testes-e-validacoes)
+- [Deploy](#deploy)
 
-```sh
+---
+
+<h2 id="visao-geral-do-projeto" align="center">Visão Geral do Projeto</h2>
+
+**IronCore Showcase** é a apresentação pública do IronCore, um projeto pessoal voltado ao acompanhamento corporal e ao planejamento de treinos.
+
+O site combina uma jornada visual pelas funcionalidades da aplicação com uma seção sobre arquitetura, tecnologias, segurança, qualidade e infraestrutura. A proposta é tornar o projeto compreensível para visitantes sem conhecimento técnico e oferecer contexto para desenvolvedores e recrutadores.
+
+A apresentação utiliza capturas reais e conteúdo fundamentado nos repositórios originais. Seu funcionamento é inteiramente estático, sem autenticação, chamadas à API, banco de dados, analytics ou persistência no navegador.
+
+<p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
+
+---
+
+<h2 id="status-atual-do-projeto" align="center">Status Atual do Projeto</h2>
+
+A implementação estática está disponível neste repositório, com layout responsivo, dez capturas autorizadas, galerias manuais, ampliação de imagens e conteúdo técnico documentado.
+
+O site possui validações automatizadas em navegador e preparação para publicação no GitHub Pages. Os resultados e limites das verificações estão registrados em [Validação](docs/validacao.md). A existência do workflow de publicação não confirma um deploy; seu acionamento é manual.
+
+As funcionalidades apresentadas correspondem ao escopo entregue do IronCore. Execução e histórico de sessões de treino, assim como geração de treinos por IA, não são apresentados como recursos disponíveis.
+
+<p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
+
+---
+
+<h2 id="tecnologias-utilizadas" align="center">Tecnologias Utilizadas</h2>
+
+- **HTML semântico:** estrutura do conteúdo, navegação e metadados.
+- **CSS:** identidade visual baseada na paleta oficial, responsividade e estados de foco.
+- **JavaScript nativo:** galerias manuais e ampliação com `dialog`.
+- **Node.js 24:** scripts de prévia local, empacotamento e validação.
+- **Playwright Core e Microsoft Edge:** verificação opcional em navegador, isolada na pasta de QA.
+- **GitHub Actions e GitHub Pages:** fluxo manual de publicação dos arquivos estáticos.
+
+O site não exige framework, instalação de dependências ou compilação para funcionar. As ferramentas de validação não integram o artefato publicado.
+
+<p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
+
+---
+
+<h2 id="funcionalidades-disponiveis" align="center">Funcionalidades Disponíveis</h2>
+
+- Apresentação do IronCore com a captura da Home.
+- Jornada visual por avaliação e evolução corporal, catálogo de exercícios e planejamento de treinos.
+- Galerias sem autoplay, com controles manuais e navegação por teclado.
+- Ampliação das dez capturas, fechamento por Esc e retorno do foco ao acionador.
+- Seção de engenharia com decisões técnicas e links para as fontes.
+- História do projeto, autoria e acesso aos repositórios oficiais.
+- Layout responsivo, textos alternativos, foco visível e respeito à preferência por movimento reduzido.
+
+Os PNGs são preservados integralmente. Sem JavaScript, as imagens continuam visíveis em sequência e seus links abrem os respectivos PNGs. A ordem editorial e os cuidados de apresentação estão no [Guia de imagens](docs/guia-imagens.md).
+
+<p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
+
+---
+
+<h2 id="documentacao-tecnica" align="center">Documentação Técnica</h2>
+
+O [índice de documentação](docs/README.md) centraliza as referências do showcase:
+
+- [Guia de imagens](docs/guia-imagens.md): sequência editorial e preservação das capturas.
+- [Fontes e revisão editorial](docs/fontes.md): fundamentação do conteúdo e identidade cromática.
+- [Validação](docs/validacao.md): verificações executadas e limites conhecidos.
+- [Briefing histórico](docs/briefing.md): requisitos e decisões originais preservados.
+
+<p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
+
+---
+
+<h2 id="estrutura-do-projeto" align="center">Estrutura do Projeto</h2>
+
+```plaintext
+ironcore-showcase/
+ ├── index.html                 # Conteúdo, navegação, capturas e modal
+ ├── styles.css                 # Identidade visual e layout responsivo
+ ├── script.js                  # Galerias e ampliação
+ ├── assets/                    # Favicon e capturas autorizadas
+ ├── docs/                      # Índice, guias, fontes e validações
+ ├── scripts/                   # Prévia local, empacotamento e teste de navegador
+ ├── .github/workflows/pages.yml # Publicação manual no GitHub Pages
+ ├── manifesto-imagens.json     # Proveniência e dimensões das capturas
+ ├── LEIA-ME.md                 # Encaminhamento para o guia do pacote
+ └── README.md                  # Apresentação e instruções principais
+```
+
+O diretório `dist/` é gerado pelo empacotador e ignorado pelo Git. Originais, imagens opcionais e arquivos de QA ficam fora do artefato de publicação.
+
+<p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
+
+---
+
+<h2 id="como-executar-o-projeto" align="center">Como Executar o Projeto</h2>
+
+### Pré-requisitos
+
+- Git para clonar o repositório.
+- Node.js 24 para a prévia HTTP local.
+
+### Passos
+
+```bash
+git clone https://github.com/renancvitor/ironcore-showcase.git
+cd ironcore-showcase
 node scripts/serve.mjs
 ```
 
-Abra http://127.0.0.1:4307/ironcore-showcase/. Encerre com Ctrl+C. O script copia os arquivos públicos para dist/ e serve apenas essa seleção. Não modifica as capturas. Após editar os arquivos, reinicie o servidor para atualizar a cópia.
+Abra [http://127.0.0.1:4307/ironcore-showcase/](http://127.0.0.1:4307/ironcore-showcase/). O servidor reproduz o subdiretório usado no GitHub Pages e serve a seleção de arquivos copiada para `dist/`.
 
-## Organização
+Encerre com `Ctrl+C`. Após editar arquivos, reinicie o servidor e atualize a página. Também é possível abrir `index.html` diretamente no navegador.
 
-| Caminho | Responsabilidade |
-| --- | --- |
-| index.html | Conteúdo semântico, metadados, imagens, galerias e modal |
-| styles.css | Identidade escura e verde, layout responsivo e foco |
-| script.js | Galerias manuais e ampliação com dialog nativo |
-| assets/screenshots/ | Dez PNGs autorizados, preservados integralmente |
-| assets/favicon.svg | Marca tipográfica decorativa do showcase |
-| docs/ | Índice, guia de imagens, fontes, validações e briefing histórico |
-| manifesto-imagens.json | Proveniência original das capturas |
-| scripts/package.mjs | Cópia por lista explícita dos arquivos publicáveis |
-| scripts/serve.mjs | Servidor de prévia local com subdiretório |
-| scripts/browser-check.mjs | Verificação opcional de navegador |
-| .github/workflows/pages.yml | Publicação manual após autorização |
+<p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
 
-originais/, extras/, visao-geral.jpg, .qa/ e dist/ são ignorados pelo Git. Originais e capturas opcionais não fazem parte do artefato de publicação.
+---
 
-## Documentação
+<h2 id="testes-e-validacoes" align="center">Testes e Validações</h2>
 
-O [índice de documentação](docs/README.md) centraliza as referências editoriais, a identidade visual, as validações e o briefing histórico. O [guia de imagens](docs/guia-imagens.md) é mantido em um único documento; LEIA-ME.md preserva o acesso pelo caminho original do pacote.
+As verificações básicas de sintaxe, empacotamento e formatação são:
 
-## Conteúdo e imagens
-
-Ordem editorial: Home (01); avaliação em destaque (03), galeria 02 → 04 → 05; exercícios 06 → 07; ciclo em destaque (09), galeria 08 → 10; engenharia e história.
-
-Todas as capturas usam object-fit: contain, dimensões explícitas e textos alternativos. A Home tem prioridade de carregamento; as demais imagens usam lazy loading. Sem JavaScript, todas ficam visíveis em sequência e os links abrem o PNG. Com JavaScript, as galerias têm anterior/próximo e setas do teclado; a ampliação permite percorrer as dez imagens, fechar com Esc e devolver o foco ao link de origem. Abrir PNG oferece leitura na resolução original com o zoom nativo do navegador.
-
-Não editar o conteúdo visual dos PNGs. Atualizações técnicas devem ser conferidas nos repositórios originais e registradas em docs/fontes.md.
-
-## Validar
-
-```sh
+```bash
 node --check script.js
 node scripts/package.mjs
 git diff --check
 ```
 
-Para validação opcional em navegador, instale Playwright Core apenas na pasta ignorada de QA:
+A verificação opcional em navegador usa Playwright Core e Microsoft Edge. Com o servidor local em execução, utilize outro terminal:
 
-```sh
+```bash
 npm install --prefix .qa --no-save --package-lock=false playwright-core
-node scripts/serve.mjs
-# Em outro terminal, com Microsoft Edge instalado:
 node scripts/browser-check.mjs
 ```
 
-A verificação usa Edge headless, sem instalar outro navegador. PLAYWRIGHT_MODULE e BROWSER_PATH podem indicar instalações alternativas. As evidências ficam em .qa/. Não há dependência de Playwright no site ou no fluxo de publicação.
+O script verifica quatro larguras de tela, galerias, ampliação, teclado e foco, caminhos em subdiretório, funcionamento sem JavaScript e integridade dos PNGs. `PLAYWRIGHT_MODULE` e `BROWSER_PATH` permitem indicar instalações alternativas; evidências ficam em `.qa/`, ignorada pelo Git.
 
-## Fluxo de trabalho
+Consulte [Validação](docs/validacao.md) para os resultados registrados e os limites de cobertura.
 
-As alterações deste repositório são feitas diretamente na main: confira e preserve o trabalho local, sincronize a branch, implemente, execute as validações e envie o commit para origin/main. Não é necessário criar branches ou Pull Requests.
+<p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
 
-O envio de commits não publica o site. A publicação continua sendo uma ação manual separada, autorizada pelo responsável.
+---
 
-## Publicar no GitHub Pages
+<h2 id="deploy" align="center">Deploy</h2>
 
-Destino previsto: https://renancvitor.github.io/ironcore-showcase/.
+O destino previsto é [IronCore Showcase no GitHub Pages](https://renancvitor.github.io/ironcore-showcase/). O site usa caminhos relativos compatíveis com esse subdiretório.
 
-**A publicação exige decisão explícita do responsável. Nada é publicado em push ou pull request.**
+O [workflow de publicação](.github/workflows/pages.yml) é exclusivamente manual. Após autorização do responsável:
 
-1. Revise as capturas autorizadas e o conteúdo, valide as alterações e confirme seu envio à main.
-2. No GitHub, configure Settings → Pages → Source como GitHub Actions.
-3. Execute manualmente Actions → Publish showcase (manual) → Run workflow, na main.
-4. O workflow copia somente os 16 arquivos permitidos para dist/, envia esse artefato e publica no Pages. Não há npm install ou compilação.
-5. Confira a URL retornada, imagens, navegação, galerias e ampliação no subdiretório.
+1. Configure **Settings → Pages → Source** como **GitHub Actions**.
+2. Execute **Actions → Publish showcase (manual) → Run workflow**, selecionando a `main`.
+3. Confira a URL retornada e a navegação do site publicado.
 
-Não configure publicação da raiz inteira do repositório. O pacote utiliza uma lista explícita para excluir documentos internos, originais e arquivos de QA. O empacotador falha se detectar arquivos inesperados em dist/.
+O workflow empacota os arquivos permitidos em `dist/` e publica somente esse diretório. Não publique a raiz inteira do repositório: originais, documentos internos e ferramentas de QA não pertencem ao artefato.
 
-Os caminhos de CSS, JS, favicon e PNGs são relativos. Âncoras funcionam sem roteador ou regras de fallback. Canonical e Open Graph usam o endereço final previsto; não representam confirmação de publicação.
+As alterações são realizadas diretamente na `main`, com sincronização, validação, commit e envio para `origin/main`. O envio de commits não aciona a publicação.
 
-## Repositórios oficiais
-
-- [IronCore Frontend](https://github.com/renancvitor/ironcore-frontend)
-- [IronCore Backend](https://github.com/renancvitor/ironcore-backend)
-- [Fontes e revisão editorial](docs/fontes.md)
-
-Os repositórios originais foram consultados somente em leitura.
+<p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
