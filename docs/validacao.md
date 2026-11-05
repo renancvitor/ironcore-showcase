@@ -61,4 +61,29 @@ Executadas após a sincronização com o merge do PR #2 (9299cef). O diretório 
 - Conferidas a introdução exata, os metadados e a ausência das expressões removidas nessas quatro larguras. Inspeção visual desktop/mobile concluída.
 - Capturas, script.js, estilos e briefing idênticos ao estado sincronizado da main. Nenhuma dependência adicionada; publicação não acionada.
 
+## Atualização funcional e de segurança — 05/11/2026
+
+Os resultados anteriores são históricos. As verificações desta atualização local estão limitadas ao que segue.
+
+### Verificações executadas
+
+- Leitura do `LEIA-ME-PACOTE.md` e de `checksums.json` do pacote adicional antes da incorporação. Inspeção visual dos cinco PNGs recebidos.
+- Consulta somente leitura às releases oficiais backend v1.3.0 e frontend v1.2.0, aos documentos de Workout Session de ambas as tags, Users/Auth e banco do backend e arquitetura/autenticação do frontend. Conteúdo conferido contra essas fontes; nenhum teste autenticado ou acesso ao banco.
+- Integridade: SHA-256 dos cinco PNGs incorporados idêntico ao pacote e aos checksums fornecidos. As nove imagens anteriores de 02 a 10 mantêm os hashes obtidos antes da alteração. Não houve recorte, recompressão ou redimensionamento. Os originais upstream não estavam no pacote: seus hashes/dimensões são proveniência declarada pelo fornecedor, sem nova validação de pixels contra os originais.
+- Manifesto JSON lido com sucesso; 14 capturas principais. Dimensões verificadas nos cabeçalhos PNG e confrontadas com manifesto e atributos HTML. Registros históricos 02–11 preservados integralmente, incluindo a captura opcional 11 não publicada. A captura 15 está identificada como parcial.
+- HTML: 48 referências locais de `href`/`src` conferidas, com arquivos e âncoras existentes, sem IDs duplicados; 14 links de ampliação e três galerias. Avaliação mantém quatro capturas, catálogo duas, planejamento três e sessão acrescenta quatro; Home ocupa a posição restante. Legendas e textos alternativos conferidos.
+- Texto superior, título e descrição aprovados do hero conferidos literalmente. Home, nova seção, separação entre prescrição e execução, persistência e card de segurança revisados. Links relativos de arquivos nos quatro documentos afetados conferidos.
+- Inspeção da seleção de `scripts/package.mjs`: passa a selecionar 20 arquivos existentes (seis arquivos estáticos/documentais e 14 PNGs) pelo manifesto. Originais, opcionais, ZIP, ferramentas e documentos de preparação não são selecionados. Os links documentais de `docs/fontes.md` para outros documentos usam o repositório oficial, evitando depender de documentos ausentes no pacote público. Esta inspeção não equivale à geração/auditoria de `dist/`.
+- Inspeção do JavaScript existente: galerias e ampliação selecionam elementos por atributos, sem contagem fixa. A nova galeria reutiliza a mesma estrutura; fallback com links diretos, controles ocultos antes da melhoria por JavaScript e estilos de movimento reduzido permanecem presentes. Fluxos de teclado, fechamento e retorno de foco foram revisados no código, sem execução de navegador nesta etapa.
+- Navegação CSS ajustada para quatro colunas no desktop, duas até 1050 px e uma até 760 px, por inspeção das regras. A identidade visual e os componentes existentes foram preservados.
+- `node --check script.js`, `node --check scripts/package.mjs` e `node --check scripts/browser-check.mjs`: aprovados (código de saída 0). A primeira tentativa foi bloqueada pelo sandbox (`EPERM` ao resolver o caminho do usuário); a repetição autorizada fora do sandbox passou. A sintaxe foi verificada com Node.js 18.20.8, sem executar os scripts.
+- Script de teste de navegador atualizado para a expectativa de 14 capturas; não executado. `script.js`, `scripts/package.mjs` e workflow de publicação não exigiram alterações.
+
+### Limitações e pendências
+
+- Empacotamento e servidor local não executados. O Node.js disponível é 18.20.8; os scripts existentes utilizam `import.meta.dirname`, ausente nessa versão, e o workflow usa Node.js 24. Não foi instalada ou atualizada ferramenta alguma.
+- Testes de navegador e revisão renderizada desktop/mobile não executados. O Edge está disponível, mas o módulo local esperado `.qa/node_modules/playwright-core` não existe; o servidor/empacotador também depende de Node compatível. Não foram confirmados nesta revisão overflow, navegação/foco, ampliação ou fallback em execução.
+- Em ambiente já compatível, pendem `node scripts/package.mjs` e, com o servidor `node scripts/serve.mjs` ativo e Playwright previamente disponível, `node scripts/browser-check.mjs`. Não instalar ferramentas neste computador para suprir essas pendências.
+- Nenhum comando Git, branch, commit, PR, alteração dos projetos pais, deploy ou acionamento de workflow. Alterações exclusivamente locais, prontas para revisão estática; publicação e validações de execução ficam a cargo do responsável.
+
 [Voltar para o índice de documentação](README.md)

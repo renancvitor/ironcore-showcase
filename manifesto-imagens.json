@@ -1,34 +1,37 @@
 {
-  "version": "2026-10-22",
-  "editable_allowed": "rectangular crop only",
-  "published_main_screenshots": 10,
+  "version": "2026-11-05",
+  "editable_allowed": "none: supplied PNGs copied byte-for-byte; documented crops are upstream provenance",
+  "published_main_screenshots": 14,
   "optional_screenshots": 1,
-  "excluded": "12-profile: privacy, contains full name and birthdate",
+  "excluded": "Historical profile capture (number 12 in the original collection, unrelated to 12-sessao-visao-geral): privacy, contains full name and birthdate",
   "shots": [
     {
       "n": 1,
-      "date": "172358",
+      "date": "2026-11-05T10:42:20",
       "slug": "01-home",
       "title": "Home / visão geral",
       "crop": [
         365,
-        58,
-        1555,
-        923
+        48,
+        1540,
+        918
       ],
       "placement": "Hero principal",
       "state": "principal",
-      "desc": "Última avaliação, evolução corporal e ciclos de treino",
+      "desc": "Home atualizada: treinos do dia, sessão em andamento, avaliação, planejamento e evolução corporal. Substitui a Home original.",
       "file": "assets/screenshots/01-home.png",
-      "source": "originais/01-home-original.png",
+      "source": "image(20261105-104220).png",
       "dimensions": [
-        1190,
-        865
+        1175,
+        870
       ],
       "source_dimensions": [
-        1916,
-        945
-      ]
+        1911,
+        938
+      ],
+      "source_sha256": "a73c9874bfe7758bd2b6febbcdf6aa582e1881efefa1e17a428b4c88503c9499",
+      "asset_sha256": "1a6e4ff05532b867945ab2ce5f290d295efa7f8dd179decd324257e49c2dc47e",
+      "provenance": "Pacote ironcore-showcase-capturas-nov2026 / checksums.json"
     },
     {
       "n": 2,
@@ -279,6 +282,120 @@
         1917,
         943
       ]
+    },
+    {
+      "n": 12,
+      "date": "2026-11-05T10:43:07",
+      "slug": "12-sessao-visao-geral",
+      "title": "Sessão / visão geral",
+      "crop": [
+        330,
+        42,
+        1570,
+        934
+      ],
+      "placement": "Execução e evolução / destaque",
+      "state": "principal",
+      "desc": "Detalhe de sessão em andamento, ciclo, status, datas e prescrição da primeira atividade.",
+      "file": "assets/screenshots/12-sessao-visao-geral.png",
+      "source": "image(20261105-104307).png",
+      "dimensions": [
+        1240,
+        892
+      ],
+      "source_dimensions": [
+        1912,
+        934
+      ],
+      "source_sha256": "76a032fc66cc0c0cc12005f7579a33b659c2421ae7646909c89c8d67c528ab0c",
+      "asset_sha256": "2ed000d9bb54987e689bd4cf617599b6a478a00ab2268e68a77507363652e295",
+      "provenance": "Pacote ironcore-showcase-capturas-nov2026 / checksums.json"
+    },
+    {
+      "n": 13,
+      "date": "2026-11-05T10:44:02",
+      "slug": "13-sessao-registro-execucao",
+      "title": "Sessão / registro de execução",
+      "crop": [
+        335,
+        0,
+        1570,
+        895
+      ],
+      "placement": "Execução e evolução / galeria 1",
+      "state": "principal",
+      "desc": "Execução real do levantamento terra com modo de carga e séries registradas.",
+      "file": "assets/screenshots/13-sessao-registro-execucao.png",
+      "source": "image(20261105-104402).png",
+      "dimensions": [
+        1235,
+        895
+      ],
+      "source_dimensions": [
+        1916,
+        897
+      ],
+      "source_sha256": "1ce4eae209cbbbea34c58c8f6f5477405849467d6b94d5c8f5b2118bdf72ad09",
+      "asset_sha256": "3482ebe124bf66411afbe29a4dac272981339536930efc8f2b68907b57943f52",
+      "provenance": "Pacote ironcore-showcase-capturas-nov2026 / checksums.json"
+    },
+    {
+      "n": 14,
+      "date": "2026-11-05T10:44:49",
+      "slug": "14-sessoes-historico",
+      "title": "Histórico de sessões",
+      "crop": [
+        0,
+        40,
+        1710,
+        931
+      ],
+      "placement": "Execução e evolução / galeria 2",
+      "state": "principal",
+      "desc": "Histórico paginado de sessões e navegação do grupo Treinos.",
+      "file": "assets/screenshots/14-sessoes-historico.png",
+      "source": "image(20261105-104449).png",
+      "dimensions": [
+        1710,
+        891
+      ],
+      "source_dimensions": [
+        1916,
+        931
+      ],
+      "source_sha256": "68c0a2768334e79699567600d61377e4074f1ea458311b387f4d84d87111bf40",
+      "asset_sha256": "520689428d1fcae7f99f0284be5a3cf4aa7f4e70b1eb6d60ede669363be2cd85",
+      "provenance": "Pacote ironcore-showcase-capturas-nov2026 / checksums.json"
+    },
+    {
+      "n": 15,
+      "date": "2026-11-05T10:48:20",
+      "slug": "15-treinos-evolucao-volume",
+      "title": "Evolução / volume de força",
+      "crop": [
+        335,
+        0,
+        1570,
+        937
+      ],
+      "placement": "Execução e evolução / galeria 3",
+      "state": "principal",
+      "desc": "Recorte da evolução de volume registrado (kg-rep), com gráfico e tabela; a captura original começa abaixo do cabeçalho da página.",
+      "file": "assets/screenshots/15-treinos-evolucao-volume.png",
+      "source": "image(20261105-104820).png",
+      "dimensions": [
+        1235,
+        937
+      ],
+      "source_dimensions": [
+        1910,
+        941
+      ],
+      "source_sha256": "5492effa0d922052ff80fe4db68da4a8a4b4922bced70ff2edfaa63cb11c1ecc",
+      "asset_sha256": "7010a96480e957c7453cb08b50a3249bcba34ff441a1d718d9889c7f8929285a",
+      "provenance": "Pacote ironcore-showcase-capturas-nov2026 / checksums.json",
+      "partial_capture": true
     }
-  ]
+  ],
+  "provenance_note": "Captures 02–10 and optional 11 retain the 2026-10-22 provenance. Home and 12–15 come from ironcore-showcase-capturas-nov2026 (2026-11-05), LEIA-ME-PACOTE.md and checksums.json. Original filenames identify upstream sources, not files bundled in this repository. Original source checksums and dimensions are supplier declarations; supplied asset checksums verified locally."
 }

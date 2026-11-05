@@ -29,7 +29,7 @@
 
 <h2 id="visao-geral-do-projeto" align="center">Visão Geral do Projeto</h2>
 
-**IronCore Showcase** é a apresentação pública do IronCore, um projeto pessoal de acompanhamento corporal e planejamento de treinos. O site reúne capturas reais da aplicação e uma seção dedicada à engenharia do projeto.
+**IronCore Showcase** é a apresentação pública do IronCore, um projeto pessoal de acompanhamento corporal, planejamento e execução de treinos. O site reúne capturas reais da aplicação e uma seção dedicada à engenharia do projeto.
 
 <p align="right"><a href="#sumario">⬆️ Voltar ao sumário</a></p>
 
@@ -56,9 +56,10 @@ O showcase está concluído e publicado no GitHub Pages, com apresentação das 
 
 <h2 id="funcionalidades-disponiveis" align="center">Funcionalidades Disponíveis</h2>
 
-- Apresentação de avaliações corporais, exercícios e planejamento de treinos.
+- Apresentação de avaliações corporais, exercícios, Workout Planning e Workout Session, com histórico e evolução de força e cardio.
 - Galerias manuais e ampliação de capturas reais.
 - Seção sobre arquitetura, tecnologias e infraestrutura do IronCore.
+- Autenticação da aplicação com sessões persistidas, renovação de tokens e revogação no servidor, descrita no card de segurança; o showcase permanece estático.
 - História, autoria e links para os repositórios oficiais.
 - Layout responsivo e navegação acessível.
 

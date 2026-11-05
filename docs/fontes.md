@@ -1,35 +1,36 @@
 # Fontes e revisão editorial
 
-Consulta em 22/10/2026, somente leitura. Este showcase apresenta o escopo funcional v1.0.0 e a implantação documentada posteriormente. Não houve acesso à produção nem teste autenticado contra a API.
+Revisão funcional e de autenticação em 05/11/2026, somente leitura, com base nas releases oficiais backend v1.3.0 e frontend v1.2.0 e nos documentos dessas tags. Referências de identidade e infraestrutura da consulta de 22/10/2026 foram preservadas. Não houve acesso à produção nem teste autenticado contra a API.
 
 ## Produto e história
 
-- [README do frontend](https://github.com/renancvitor/ironcore-frontend/blob/main/README.md): funcionalidades entregues, stack, testes e estado atual.
-- [Release v1.0.0 do frontend](https://github.com/renancvitor/ironcore-frontend/blob/main/docs/releases/v1.0.0/README.md): avaliações, gráficos, catálogo, planejamento, prescrição e limites.
-- [README do backend](https://github.com/renancvitor/ironcore-backend/blob/main/README.md): origem como aplicação prática, evolução incremental e estado atual.
-- [Release v1.0.0 do backend](https://github.com/renancvitor/ironcore-backend/blob/main/docs/releases/v1.0.0/README.md): domínio de planejamento, ownership e lifecycle.
+- [Release oficial v1.2.0 do frontend](https://github.com/renancvitor/ironcore-frontend/releases/tag/v1.2.0): Workout Session, histórico, força e cardio, Home, navegação e recuperação autenticada.
+- [Release oficial v1.3.0 do backend](https://github.com/renancvitor/ironcore-backend/releases/tag/v1.3.0): execução real, snapshots, histórico, indicadores e autenticação persistida.
+- [Workout Session no frontend](https://github.com/renancvitor/ironcore-frontend/blob/v1.2.0/docs/workout-session/README.md): início, continuidade, encerramento, registros parciais, histórico e gráficos; navegação de Treinos e acesso pela Home.
+- [Workout Session no backend](https://github.com/renancvitor/ironcore-backend/blob/v1.3.0/docs/workout-session/README.md): contratos de execução, preservação histórica e indicadores calculados sobre dados executados.
+- A história, as funcionalidades anteriores e a infraestrutura têm como base a revisão de 22/10/2026; as releases antigas permanecem como registros dos respectivos marcos nos repositórios oficiais.
 
 ## Engenharia
 
-- [Arquitetura do frontend](https://github.com/renancvitor/ironcore-frontend/blob/main/docs/architecture/README.md): core/shared/layout/features, reutilização do catálogo, sessão e responsabilidades.
+- [Arquitetura do frontend](https://github.com/renancvitor/ironcore-frontend/blob/v1.2.0/docs/architecture/README.md): core/shared/layout/features, navegação, recuperação coordenada de autenticação, tratamento de 401/429 e CSRF. Tokens não ficam no JavaScript; somente leituras elegíveis são repetidas após recuperação, nunca escritas automaticamente. A renovação automática depende dos recursos compatíveis do navegador.
 - [Rotas implementadas](https://github.com/renancvitor/ironcore-frontend/blob/main/src/app/app.routes.ts): conferência de loadComponent e das features atuais.
 - [Arquitetura do backend](https://github.com/renancvitor/ironcore-backend/blob/main/docs/architecture/README.md): DDD pragmático, camadas, contratos e separação Person/User.
 - [Testes do backend](https://github.com/renancvitor/ironcore-backend/blob/main/docs/testing/README.md): testes por camada, Testcontainers e migrations reais.
-- [Banco e migrations](https://github.com/renancvitor/ironcore-backend/blob/main/docs/database/README.md): relações, schema implementado e Flyway.
-- [Users e Auth](https://github.com/renancvitor/ironcore-backend/blob/main/docs/users/README.md): cookies, CSRF, usuário único e limites de autenticação.
+- [Banco e migrations](https://github.com/renancvitor/ironcore-backend/blob/v1.3.0/docs/database/README.md): persistência de sessões de treino, atividades, séries e autenticação, com evolução Flyway.
+- [Users e Auth](https://github.com/renancvitor/ironcore-backend/blob/v1.3.0/docs/users/README.md): sessão persistida consultada além da assinatura do JWT, cookies Secure/HttpOnly, refresh de uso único com rotação, revogação no logout e das sessões anteriores após alteração de senha, expiração por inatividade e teto absoluto, CSRF e controle persistido de tentativas. A troca normal de senha emite uma nova sessão para a requisição atual.
 - [Deploy do frontend](https://github.com/renancvitor/ironcore-frontend/blob/main/docs/deploy/README.md): Cloudflare Pages, cookie, CSRF e independência do CI.
 - [Deploy do backend](https://github.com/renancvitor/ironcore-backend/blob/main/docs/deploy/README.md): Java 21, Spring Boot 3.5, OVHcloud no Canadá, Caddy, Supabase em São Paulo e TLS.
 - [Workflow CD implementado](https://github.com/renancvitor/ironcore-backend/blob/main/.github/workflows/cd.yml): condições de CI aprovado e nova verificação Maven antes do envio.
 
 ## Diferenças de contexto resolvidas
 
-1. A release histórica do backend ainda descreve o frontend como fora do escopo implementado naquele marco. Os READMEs e documentos atuais de deploy registram frontend e backend integrados em produção. A narrativa usa esse estado posterior, preservando a release como registro histórico.
-2. O README do backend também contém listas de funcionalidades planejadas e diagramas futuros. Elas não foram usadas como evidência de entrega. Sessões, histórico de execução e IA não são apresentados como recursos disponíveis.
-3. A release do frontend exclui deploy das ações daquela entrega; o documento posterior de deploy confirma a implantação. São marcos diferentes.
-4. O briefing tinha pendências de coleta já resolvidas em sua seção 11 e no pacote fornecido. A especificação atual fixa dez imagens e proíbe novos recortes ou conversões. Todos os PNGs foram usados sem alteração.
-5. O guia foi fornecido originalmente em LEIA-ME.md e copiado para docs/guia-imagens.md na implementação inicial. Agora o [guia de imagens](guia-imagens.md) é a fonte única; o arquivo da raiz mantém um encaminhamento para preservar as referências do briefing histórico.
-6. A captura 04 mostra um gráfico parcial. A legenda informa esse limite; a imagem 03 permanece como destaque da avaliação.
-7. Publicação aparece como aceite no briefing histórico, mas a especificação atual exige autorização. O workflow é exclusivamente manual; não foi acionado.
+1. Releases antigas e o briefing descrevem etapas anteriores. O escopo entregue é o das releases oficiais consultadas: sessões, histórico e evolução de força e cardio já existem. Geração de treinos por IA, aderência inferida e registro offline não foram apresentados como entregues.
+2. Workout Planning define a prescrição; Workout Session registra dados efetivamente informados. Iniciar ou encerrar uma sessão não transforma valores planejados em execução. Indicadores usam dados executados; a preservação histórica independe de mudanças posteriores no planejamento.
+3. Os marcos de implantação e identidade da revisão de 22/10/2026 permanecem identificados como tal; não houve nova verificação da infraestrutura de produção.
+4. A seleção possui 14 capturas principais: Home substituída e quatro adições (12–15), com PNGs intactos. O registro opcional 11 permanece fora da publicação. O antigo Perfil de número 12 pertence à coleta histórica e não é a nova captura de sessão.
+5. O guia foi fornecido originalmente em LEIA-ME.md. O [guia de imagens no repositório](https://github.com/renancvitor/ironcore-showcase/blob/main/docs/guia-imagens.md) mantém a orientação atual; o arquivo da raiz é um encaminhamento. O link absoluto permite consultar o guia sem incluí-lo no pacote estático público.
+6. As capturas 04 e 15 são parciais. A 15 mostra exclusivamente gráfico e tabela de volume de força, sem cabeçalho; os demais indicadores documentados não receberam imagens artificiais.
+7. Publicação aparece no briefing histórico. Esta atualização é exclusivamente local: nenhum comando Git, branch, commit, PR, instalação ou publicação foi executado; workflow manual preservado.
 
 Não são publicadas contagens de testes, percentuais de cobertura, credenciais ou promessas de disponibilidade. A hospedagem descrita é a da aplicação IronCore; este showcase é um site independente destinado ao GitHub Pages.
 
@@ -47,4 +48,4 @@ O hero apresenta o texto superior “PROJETO PESSOAL”, o título “IronCore�
 
 A página não exibe mais identificadores de versão/release. A autoria de Renan Vitor está explicitada na seção do projeto e aponta para o perfil proprietário dos repositórios; o nome também consta na seção de contato do README oficial do frontend. Documentos históricos mantêm suas referências de versão.
 
-[Voltar para o índice de documentação](README.md)
+[Índice de documentação no repositório](https://github.com/renancvitor/ironcore-showcase/blob/main/docs/README.md)

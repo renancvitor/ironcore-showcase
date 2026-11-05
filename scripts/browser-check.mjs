@@ -29,7 +29,7 @@ try {
     await page.locator('#inicio').scrollIntoViewIfNeeded();
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, 'No horizontal overflow at ' + width);
     const captures = page.locator('main [data-image]');
-    assert.equal(await captures.count(), 10);
+    assert.equal(await captures.count(), 14);
     for (const gallery of await page.locator('[data-gallery]').all()) {
       const count = await gallery.locator('.capture').count();
       for (let i = 0; i < count; i++) {
@@ -51,12 +51,12 @@ try {
     await first.click();
     assert.equal(await page.locator('dialog').evaluate(el => el.open), true);
     assert.equal(await page.locator('[data-close]').evaluate(el => el === document.activeElement), true);
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 14; i++) {
       await page.locator('.lightbox-image img').evaluate(img => img.decode());
       assert.equal(await page.locator('.lightbox-image img').evaluate(img => img.naturalWidth > 0), true);
       await page.keyboard.press('ArrowRight');
     }
-    assert.match(await page.locator('[data-lightbox-caption]').innerText(), /^1 \/ 10/);
+    assert.match(await page.locator('[data-lightbox-caption]').innerText(), /^1 \/ 14/);
     // Native modal must contain tab focus and return it on close.
     for (let i = 0; i < 7; i++) {
       await page.keyboard.press('Tab');
@@ -87,7 +87,7 @@ try {
   const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   const fallback = await context.newPage();
   await fallback.goto(url);
-  assert.equal(await fallback.locator('main .capture:visible').count(), 10);
+  assert.equal(await fallback.locator('main .capture:visible').count(), 14);
   assert.equal(await fallback.locator('.gallery-controls:visible').count(), 0);
   await context.close();
   const manifest = JSON.parse(await readFile(resolve(root, 'manifesto-imagens.json'), 'utf8'));
@@ -99,7 +99,7 @@ try {
     assert.equal(source.readUInt32BE(20), shot.dimensions[1]);
   }
   assert.deepEqual(errors, []);
-  console.log('PASS: 4 viewports; galleries; 10 lightbox captures; keyboard/focus; anchors; relative assets; no-JS; reduced motion; no external requests/storage; exact PNG copies.');
+  console.log('PASS: 4 viewports; galleries; 14 lightbox captures; keyboard/focus; anchors; relative assets; no-JS; reduced motion; no external requests/storage; exact PNG copies.');
 } finally {
   await browser.close();
 }
